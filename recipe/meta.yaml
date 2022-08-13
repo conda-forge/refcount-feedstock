@@ -15,9 +15,14 @@ build:
   number: 0
 
 requirements:
+  build:
+    - pip
+    - python >=3.6
+    - poetry
   host:
     - pip
     - python >=3.6
+    - poetry
   run:
     - cffi >=1.11.5
     - python >=3.6
