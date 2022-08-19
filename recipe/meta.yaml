@@ -1,5 +1,5 @@
 {% set name = "refcount" %}
-{% set version = "1.0.0" %}
+{% set version = "1.1.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 88aefe6cdf7758aa94ac09979014bad2a0865dadb72bc8bb30c30e91ec9c27e7
+  sha256: 73b2d0449e7f7edb775ae4b2ed1c4c495fee4701067fa2eefcee5251affae478
 
 build:
   noarch: python
@@ -25,6 +25,7 @@ requirements:
     - poetry
   run:
     - cffi >=1.11.5
+    - typing-extensions >=4.3.0
     - python >=3.6
 
 test:
