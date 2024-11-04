@@ -1,5 +1,5 @@
 {% set name = "refcount" %}
-{% set version = "1.2.4" %}
+{% set version = "1.2.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 1943d6186c882d0ebf38ec9966eed171f9c98dc4f7edd7a088480eaf726f925e
+  sha256: c72ddcb3d4c327f77869a2544a7ba93d94651fca9b22c803aea34ee7b55164f0
 
 build:
   noarch: python
