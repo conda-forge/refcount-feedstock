@@ -1,5 +1,5 @@
 {% set name = "refcount" %}
-{% set version = "1.2.5" %}
+{% set version = "1.2.7" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: c72ddcb3d4c327f77869a2544a7ba93d94651fca9b22c803aea34ee7b55164f0
+  sha256: 945cb9c89a6800ad6c1df475b59fd343495c81f6eb712ac7a6160921383b83d7
 
 build:
   noarch: python
@@ -17,16 +17,21 @@ build:
 requirements:
   build:
     - pip
-    - python >=3.6
-    - poetry
+    - python >={{ python_min }}
+    - uv
+    - pdm
+    - pdm-backend
   host:
     - pip
     - python {{ python_min }}
-    - poetry
+    - uv
+    - pdm
+    - pdm-backend
   run:
-    - cffi >=1.11.5
+    - cffi >=1.17
     - typing-extensions >=4.3.0
     - python >={{ python_min }}
+
 
 test:
   imports:
