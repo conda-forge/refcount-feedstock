@@ -17,16 +17,19 @@ build:
 requirements:
   build:
     - pip
-    - python >=3.6
-    - poetry
+    - python >={{ python_min }}
+    - uv
+    - pdm
   host:
     - pip
     - python {{ python_min }}
-    - poetry
+    - uv
+    - pdm
   run:
-    - cffi >=1.11.5
+    - cffi >=1.17
     - typing-extensions >=4.3.0
     - python >={{ python_min }}
+
 
 test:
   imports:
