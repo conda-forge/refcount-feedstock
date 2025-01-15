@@ -20,11 +20,13 @@ requirements:
     - python >={{ python_min }}
     - uv
     - pdm
+    - pdm-backend
   host:
     - pip
     - python {{ python_min }}
     - uv
     - pdm
+    - pdm-backend
   run:
     - cffi >=1.17
     - typing-extensions >=4.3.0
